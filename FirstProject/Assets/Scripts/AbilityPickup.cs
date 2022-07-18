@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AbilityPickUp : MonoBehaviour
+public class AbilityPickup : MonoBehaviour
 {
 
     public AbilityTypes abilityTypes;

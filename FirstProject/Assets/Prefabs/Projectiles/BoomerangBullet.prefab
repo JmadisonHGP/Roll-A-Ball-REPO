@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -7225014782600959613}
   - component: {fileID: 8166075508820800560}
   - component: {fileID: -2222354416066651098}
+  - component: {fileID: 6726473277668751378}
   m_Layer: 0
   m_Name: BoomerangBullet
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 4750680919176926660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.4, y: 0.6, z: 116.90844}
-  m_LocalScale: {x: 1, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.3, z: 0.7}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -110,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a270305ff3a74a12b0c8df78e30ee3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 15
   movementPattern: 1
   movementBuffer: 0.5
 --- !u!114 &8166075508820800560
@@ -125,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3362294b3124fc69d0e4d76be4b20e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 4
+  lifeTime: 3
 --- !u!114 &-2222354416066651098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,5 +139,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bda66416096e64e219a28194c307a457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: -5
+  damage: -30
   targetType: 1
+--- !u!54 &6726473277668751378
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4750680919176926660}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 4750680919176926660, guid: 84daa16a8b6ea43d4afc095100e2c03a, type: 3}
-  attackSpeed: 0
-  spawnOffset: {x: 0, y: 0, z: 0}
+  attackSpeed: 1
+  spawnOffset: {x: 0, y: 0, z: 1}
