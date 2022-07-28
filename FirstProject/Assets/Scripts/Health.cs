@@ -16,7 +16,6 @@ public class Health : MonoBehaviour
         Debug.Log(gameObject.name + "current health:" + currentHealth);
     }
 
-
     public void ChangeHealth(int damage)
     {
         //Health goes up or down
@@ -24,10 +23,17 @@ public class Health : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Destroy(gameObject);
+            if(CompareTag("Player"))
+            {
+                gameObject.SetActive(false); //Despawn the player
+                FindObjectOfType<GameManager>().EndGame(); //Tell the Game Manager to reset the level
+            }
+
+            else
+            {
+                Destroy(gameObject);
+            }
+
         }
     }
 }
-
-
-

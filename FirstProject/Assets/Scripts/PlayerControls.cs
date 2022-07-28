@@ -48,10 +48,6 @@ public class PlayerControls : MonoBehaviour
             pickUpCount += 1; //Increment the score
             FindObjectOfType<GameManager>().setCountText(pickUpCount); //Tell the Game Manager to update the score text
             other.gameObject.SetActive(false); //Despawn the pickup game object
-        } else if (other.gameObject.CompareTag("Enemy")) // If the player hits an enemy...
-        {
-            gameObject.SetActive(false); //Despawn the player
-            FindObjectOfType<GameManager>().EndGame(); //Tell the Game Manager to reset the level
         }
     }
 
