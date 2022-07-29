@@ -14,6 +14,11 @@ public class Damage : MonoBehaviour
         target.GetComponent<Health>().ChangeHealth(damage);
     }
 
+        public void DealEnemyDamage(GameObject target)
+    {
+        target.GetComponent<EnemyHealth>().ChangeHealth(damage);
+    }
+
     private void OnTriggerEnter(Collider target)
     {
         switch (targetType)
@@ -21,7 +26,7 @@ public class Damage : MonoBehaviour
             case UnitTypes.Enemy:
                 if (target.CompareTag("Enemy"))
                 {
-                    DealDamage(target.gameObject);
+                    DealEnemyDamage(target.gameObject);
                 }
                 break;
             case UnitTypes.Player:
